@@ -1,0 +1,124 @@
+# Data Visualization
+`R`には極めて多彩なグラフの描画機能が搭載されている。そのため、`R`上で行なった処理結果を例えばExcelなどにコピペしてグラフを作成するのではなく、ぜひ`R`の内部でグラフの描画まで完結させることを強く推奨する。昨今は`tidyverse`パッケージの一部である`ggplot()`を用いる方法が`R`コミュニティの中では優勢であるが、以下では`base`環境の中で伝統的に用いられてきた関数に基づいて説明する。
+
+## 棒グラフ
+棒グラフは`barplot()`で作成できる。先に作成した、調査年ごとの同類婚の比率が格納された`PropDiag_byCensus`を引数として渡すと、
+
+```{r}
+PropDiag_byCensus
+barplot(PropDiag_byCensus)
+```
+
+のように、デフォルトの設定では積み上げ棒グラフが描画される。このままでは論文にそのまま掲載できるような水準の体裁になっていないが、例えば以下のようにコードを書き加えれば（幾分）見栄えは向上する。
+
+```{r}
+barplot(PropDiag_byCensus, 
+        ylim = c(0, 1),
+        axes = FALSE,
+        legend = rownames(PropDiag_byCensus))
+axis(2, las = 1)
+mtext("Census Year", side = 1, line = 3)
+mtext("Proportions", side = 2, line = 3)
+title("Proportions of Homogamy, by Education and Census Year")
+```
+
+積み上げ棒グラフではなく、調査年・学歴別に棒グラフを描きたい場合は、`beside = TRUE`をオプションに加えばよい。
+
+```{r}
+barplot(PropDiag_byCensus,  beside = TRUE,
+        ylim = c(0, 1),
+        axes = FALSE,
+        legend = rownames(PropDiag_byCensus))
+axis(2, las = 1)
+mtext("Census Year", side = 1, line = 3)
+mtext("Proportions", side = 2, line = 3)
+title("Proportions of Homogamy, by Education and Census Year")
+```
+
+## 折れ線グラフ
+折れ線グラフは`plot()`あるいは`matplot()`を用いて描画できる。`plot()`に最低限必要な引数はx軸とy軸に対応するベクトルである。例として、調査年ごとに同類婚が占める割合を折れ線グラフにしてみよう。
+
+```{r}
+# 調査年ごとに同類婚の合計比率を算出
+PropHomg <- apply(PropDiag_byCensus, 2, sum)
+PropHomg
+
+# 折れ線グラフを描く
+plot(x = seq(1980, 2010, 10), #"x="は省略してもよい
+     y = PropHomg,            #"y="は省略してもよい
+     type = "o",
+     pch  = 16,
+     xlim = c(1980, 2010),
+     ylim = c(0, 1),
+     ann = FALSE,
+     axes = FALSE)
+axis(1)
+axis(2, at = seq(0, 1, 0.25), las = 1)
+mtext("Census Year", side = 1, line = 3)
+mtext("Proportions", side = 2, line = 3)
+title("Proportions of Homogamy by Census Year")
+```
+
+`plot()`の中で指定した引数について少しだけ補足すると以下の通りである。
+
+- `type`：線と点のどちらをプロットするか、あるいはその両者をプロットするか
+- `pch`：点（マーカー）の種類
+
+`type`と`pch`の種類については`plot()`のヘルプページを参照されたい(コンソール画面に`?plot`と入力すればよい)。
+
+`matplot()`は`plot()`の拡張版で、引数`y`に行列を指定できる。例えば、学歴別の同類婚がそれぞれ全夫婦に占める割合の変化をプロットしてみよう。
+
+```{r}
+matplot(seq(1980, 2010, 10), t(PropDiag_byCensus),
+        type = "o",
+        lty = 1,
+        pch = 16,
+        xlim = c(1980, 2010),
+        ylim = c(0, 0.5),
+        ann = FALSE,
+        axes = FALSE)
+axis(1, at = seq(1980, 2010, 10))
+axis(2, at = seq(0, 0.5, 0.1), las = 1)
+mtext("Census Year", side = 1, line = 3)
+mtext("Proportions", side = 2, line = 3)
+legend("topright",
+       rownames(PropDiag_byCensus),
+       lty = 1,
+       pch = 16,
+       col = 1:4,
+       bty = "n")
+```
+
+
+
+
+## 補足：クロス集計表の可視化
+クロス表を可視化する方法として、以下ではモザイクプロット（mosaic plot）とバルーンプロット（balloon plot）について解説する。
+
+### モザイクプロット
+モザイクプロットは以下の特徴を持つ
+
+- タイルの各辺の長さが行／列の変数の周辺分布を表す
+- タイルの面積がセル度数の大きさを示す
+
+```{r}
+mosaicplot(EduWH1980)
+```
+
+### バルーンプロット
+バルーンプロットは、セル度数に比例した大きさのマーカーをクロス表のセル上にプロットするものである。
+
+```{r, message = FALSE}
+library(gplots)
+```
+
+```{r}
+EduWH1980_tab <- as.table(EduWH1980)  # tableクラスにしてから引き渡す必要がある
+balloonplot(x = EduWH1980_tab,
+            main = "",
+            xlab = "Wife's Education",
+            ylab = "Husband's Education")
+```
+
+
+

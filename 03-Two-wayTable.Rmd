@@ -1,0 +1,60 @@
+# 二元クロス集計表の処理
+## 周辺度数の追加
+すでに見た夫婦の学歴組み合わせのクロス集計表には行方向・列方向ともに周辺度数（marginal frequency）がついていない。これは`xtabs()`や`table()`などの関数を用いて個票データからクロス集計表を作成した場合も同様である。クロス集計表に周辺度数を追加するためには`addmargins()`を用いる。
+
+```{r}
+# 行周辺度数
+addmargins(EduWH1980, margin = 1)
+
+# 列周辺度数
+addmargins(EduWH1980, margin = 2)
+
+# 行／列周辺度数
+addmargins(EduWH1980, margin = c(1,2))
+```
+
+## 比率（proportion）の算出
+クロス集計表の分析においておそらく最も頻繁に行うのが比率（proportion）の計算である。`R`にはこれを可能にする数多くのパッケージおよび関数が存在するが、以下では`base`に組み込まれている`proportions()`、および`RcmdrMisc`パッケージの`rowPercents()`・`colPercents()`を紹介する。
+
+### `proportions()`
+この関数は`margin`という引数を持ち、1は行方向、2は列方向にそれぞれ算出した「比率」を返す。
+
+```{r}
+proportions(EduWH1980, margin = 1) * 100 # 行パーセント
+proportions(EduWH1980, margin = 2) * 100 # 列パーセント
+
+# 有効桁数を減らしたい場合は"round"で丸めるとよい
+round(proportions(EduWH1980, margin = 1) * 100, digits = 1) # "digits = "は省略してもよい
+
+```
+
+tableの次元に名前がついている場合、marginには次元名を指定することもできる
+
+```{r}
+proportions(EduWH1980, margin = "EduW")
+proportions(EduWH1980, margin = "EduH")
+```
+
+周辺度数をつけてから`proportions()`に引き渡せば行全体あるいは列全体の変数の分布を算出できる。
+
+```{r}
+EduWH1980_wRMar <- addmargins(EduWH1980, margin = 1)  # w/ row margins
+round(proportions(EduWH1980_wRMar, margin = 1) * 100, digits = 1)
+
+EduWH1980_wCMar <- addmargins(EduWH1980, margin = 2)  # w/ column margins
+round(proportions(EduWH1980_wCMar, margin = 2) * 100, digits = 1)
+```
+
+
+### `rowPercents()`・`colPercents()`
+`RcmdrMisc`パッケージの`rowPercents()`や`colPercents()`を使っても行パーセントや列パーセントを算出できる。`proportions()`と比較した際のこれらの関数の便利な点は、デフォルトで周辺度数を出力結果に返してくれることである。
+
+```{r, message = FALSE}
+library(RcmdrMisc)
+```
+
+```{r}
+rowPercents(EduWH1980, digits = 1)
+colPercents(EduWH1980, digits = 1)
+```
+

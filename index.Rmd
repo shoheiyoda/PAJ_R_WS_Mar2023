@@ -1,0 +1,24 @@
+--- 
+title: "人口学研究におけるRの活用"
+author: "余田翔平（国立社会保障・人口問題研究所）"
+date: "`r Sys.Date()`"
+subtitle: Rによるカテゴリカルデータ分析：多重クロス表
+site: bookdown::bookdown_site
+documentclass: book
+# bibliography:
+# - book.bib
+# - packages.bib
+link-citations: yes
+---
+
+# このサイトについて
+
+このサイトは日本人口学会による研究集会「人口学研究におけるRの活用」（2023年3月22日）の報告資料および演習用ページです。研究集会は学会員限定ですが、本サイトはどなたでも閲覧可能です。研究集会後も本資料は修正・更新される可能性があります。
+
+
+<!-- # ```{r include=FALSE} -->
+<!-- # # automatically create a bib database for R packages -->
+<!-- # knitr::write_bib(c( -->
+<!-- #   .packages(), 'bookdown', 'knitr', 'rmarkdown' -->
+<!-- # ), 'packages.bib') -->
+<!-- # ``` -->
