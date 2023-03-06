@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Data Visualization | 人口学研究におけるRの活用</title>
-  <meta name="description" content="Chapter 6 Data Visualization | 人口学研究におけるRの活用" />
+  <title>Chapter 5 Data Visualization | 人口学研究におけるRの活用</title>
+  <meta name="description" content="Chapter 5 Data Visualization | 人口学研究におけるRの活用" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Data Visualization | 人口学研究におけるRの活用" />
+  <meta property="og:title" content="Chapter 5 Data Visualization | 人口学研究におけるRの活用" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Data Visualization | 人口学研究におけるRの活用" />
+  <meta name="twitter:title" content="Chapter 5 Data Visualization | 人口学研究におけるRの活用" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="余田翔平（国立社会保障・人口問題研究所）" />
 
 
-<meta name="date" content="2023-02-26" />
+<meta name="date" content="2023-03-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="多元クロス集計表の処理.html"/>
-
+<link rel="next" href="reference.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -119,6 +119,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -136,48 +158,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">人口学研究におけるRの活用</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> このサイトについて</a></li>
-<li class="chapter" data-level="2" data-path="はじめに.html"><a href="はじめに.html"><i class="fa fa-check"></i><b>2</b> はじめに</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>このサイトについて</a></li>
+<li class="chapter" data-level="1" data-path="はじめに.html"><a href="はじめに.html"><i class="fa fa-check"></i><b>1</b> はじめに</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="はじめに.html"><a href="はじめに.html#本報告の目的"><i class="fa fa-check"></i><b>2.1</b> 本報告の目的</a></li>
-<li class="chapter" data-level="2.2" data-path="はじめに.html"><a href="はじめに.html#人口学的分析への適用例学歴同類婚"><i class="fa fa-check"></i><b>2.2</b> 人口学的分析への適用例：<strong>学歴同類婚</strong></a></li>
+<li class="chapter" data-level="1.1" data-path="はじめに.html"><a href="はじめに.html#本報告の目的"><i class="fa fa-check"></i><b>1.1</b> 本報告の目的</a></li>
+<li class="chapter" data-level="1.2" data-path="はじめに.html"><a href="はじめに.html#人口学的分析への適用例学歴同類婚"><i class="fa fa-check"></i><b>1.2</b> 人口学的分析への適用例：<strong>学歴同類婚</strong></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="データの読み込み.html"><a href="データの読み込み.html"><i class="fa fa-check"></i><b>3</b> データの読み込み</a>
+<li class="chapter" data-level="2" data-path="データの読み込み.html"><a href="データの読み込み.html"><i class="fa fa-check"></i><b>2</b> データの読み込み</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの読み込み"><i class="fa fa-check"></i><b>3.1</b> CSVファイルの読み込み</a></li>
-<li class="chapter" data-level="3.2" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの出力"><i class="fa fa-check"></i><b>3.2</b> CSVファイルの出力</a>
+<li class="chapter" data-level="2.1" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの読み込み"><i class="fa fa-check"></i><b>2.1</b> CSVファイルの読み込み</a></li>
+<li class="chapter" data-level="2.2" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの出力"><i class="fa fa-check"></i><b>2.2</b> CSVファイルの出力</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="データの読み込み.html"><a href="データの読み込み.html#出力するオブジェクトの準備"><i class="fa fa-check"></i><b>3.2.1</b> 出力するオブジェクトの準備</a></li>
-<li class="chapter" data-level="3.2.2" data-path="データの読み込み.html"><a href="データの読み込み.html#write.csv"><i class="fa fa-check"></i><b>3.2.2</b> <code>write.csv()</code></a></li>
-<li class="chapter" data-level="3.2.3" data-path="データの読み込み.html"><a href="データの読み込み.html#write.table"><i class="fa fa-check"></i><b>3.2.3</b> <code>write.table()</code></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html"><i class="fa fa-check"></i><b>4</b> 二元クロス集計表の処理</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#周辺度数の追加"><i class="fa fa-check"></i><b>4.1</b> 周辺度数の追加</a></li>
-<li class="chapter" data-level="4.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#比率proportionの算出"><i class="fa fa-check"></i><b>4.2</b> 比率（proportion）の算出</a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#proportions"><i class="fa fa-check"></i><b>4.2.1</b> <code>proportions()</code></a></li>
-<li class="chapter" data-level="4.2.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#rowpercentscolpercents"><i class="fa fa-check"></i><b>4.2.2</b> <code>rowPercents()</code>・<code>colPercents()</code></a></li>
+<li class="chapter" data-level="2.2.1" data-path="データの読み込み.html"><a href="データの読み込み.html#出力するオブジェクトの準備"><i class="fa fa-check"></i><b>2.2.1</b> 出力するオブジェクトの準備</a></li>
+<li class="chapter" data-level="2.2.2" data-path="データの読み込み.html"><a href="データの読み込み.html#write.csv"><i class="fa fa-check"></i><b>2.2.2</b> <code>write.csv()</code></a></li>
+<li class="chapter" data-level="2.2.3" data-path="データの読み込み.html"><a href="データの読み込み.html#write.table"><i class="fa fa-check"></i><b>2.2.3</b> <code>write.table()</code></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html"><i class="fa fa-check"></i><b>5</b> 多元クロス集計表の処理</a>
+<li class="chapter" data-level="3" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html"><i class="fa fa-check"></i><b>3</b> 二元クロス集計表の処理</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#配列array"><i class="fa fa-check"></i><b>5.1</b> 配列（array）</a></li>
-<li class="chapter" data-level="5.2" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#abindを用いた配列の作成"><i class="fa fa-check"></i><b>5.2</b> <code>abind()</code>を用いた配列の作成</a></li>
-<li class="chapter" data-level="5.3" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyを用いた配列の処理"><i class="fa fa-check"></i><b>5.3</b> <code>apply()</code>を用いた配列の処理</a></li>
-<li class="chapter" data-level="5.4" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyと自作関数を組み合わせる"><i class="fa fa-check"></i><b>5.4</b> <code>apply()</code>と自作関数を組み合わせる</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>6</b> Data Visualization</a>
+<li class="chapter" data-level="3.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#周辺度数の追加"><i class="fa fa-check"></i><b>3.1</b> 周辺度数の追加</a></li>
+<li class="chapter" data-level="3.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#比率proportionの算出"><i class="fa fa-check"></i><b>3.2</b> 比率（proportion）の算出</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="data-visualization.html"><a href="data-visualization.html#棒グラフ"><i class="fa fa-check"></i><b>6.1</b> 棒グラフ</a></li>
-<li class="chapter" data-level="6.2" data-path="data-visualization.html"><a href="data-visualization.html#折れ線グラフ"><i class="fa fa-check"></i><b>6.2</b> 折れ線グラフ</a></li>
-<li class="chapter" data-level="6.3" data-path="data-visualization.html"><a href="data-visualization.html#補足クロス集計表の可視化"><i class="fa fa-check"></i><b>6.3</b> 補足：クロス集計表の可視化</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="data-visualization.html"><a href="data-visualization.html#モザイクプロット"><i class="fa fa-check"></i><b>6.3.1</b> モザイクプロット</a></li>
-<li class="chapter" data-level="6.3.2" data-path="data-visualization.html"><a href="data-visualization.html#バルーンプロット"><i class="fa fa-check"></i><b>6.3.2</b> バルーンプロット</a></li>
+<li class="chapter" data-level="3.2.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#proportions"><i class="fa fa-check"></i><b>3.2.1</b> <code>proportions()</code></a></li>
+<li class="chapter" data-level="3.2.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#rowpercentscolpercents"><i class="fa fa-check"></i><b>3.2.2</b> <code>rowPercents()</code>・<code>colPercents()</code></a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html"><i class="fa fa-check"></i><b>4</b> 多元クロス集計表の処理</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#配列array"><i class="fa fa-check"></i><b>4.1</b> 配列（array）</a></li>
+<li class="chapter" data-level="4.2" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#abindを用いた配列の作成"><i class="fa fa-check"></i><b>4.2</b> <code>abind()</code>を用いた配列の作成</a></li>
+<li class="chapter" data-level="4.3" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyを用いた配列の処理"><i class="fa fa-check"></i><b>4.3</b> <code>apply()</code>を用いた配列の処理</a></li>
+<li class="chapter" data-level="4.4" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyと自作関数を組み合わせる"><i class="fa fa-check"></i><b>4.4</b> <code>apply()</code>と自作関数を組み合わせる</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>5</b> Data Visualization</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="data-visualization.html"><a href="data-visualization.html#棒グラフ"><i class="fa fa-check"></i><b>5.1</b> 棒グラフ</a></li>
+<li class="chapter" data-level="5.2" data-path="data-visualization.html"><a href="data-visualization.html#折れ線グラフ"><i class="fa fa-check"></i><b>5.2</b> 折れ線グラフ</a></li>
+<li class="chapter" data-level="5.3" data-path="data-visualization.html"><a href="data-visualization.html#補足クロス集計表の可視化"><i class="fa fa-check"></i><b>5.3</b> 補足：クロス集計表の可視化</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="data-visualization.html"><a href="data-visualization.html#モザイクプロット"><i class="fa fa-check"></i><b>5.3.1</b> モザイクプロット</a></li>
+<li class="chapter" data-level="5.3.2" data-path="data-visualization.html"><a href="data-visualization.html#バルーンプロット"><i class="fa fa-check"></i><b>5.3.2</b> バルーンプロット</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -197,11 +220,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-visualization" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Data Visualization<a href="data-visualization.html#data-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><code>R</code>には極めて多彩なグラフの描画機能が搭載されている。そのため、<code>R</code>上で行なった処理結果を例えばExcelなどにコピペしてグラフを作成するのではなく、ぜひ<code>R</code>の内部でグラフの描画まで完結させることを強く推奨する。昨今は<code>tidyverse</code>パッケージの一部である<code>ggplot()</code>を用いる方法が<code>R</code>コミュニティの中では優勢であるが、以下では<code>base</code>環境の中で伝統的に用いられてきた関数に基づいて説明する。</p>
-<div id="棒グラフ" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> 棒グラフ<a href="data-visualization.html#棒グラフ" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="data-visualization" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Data Visualization<a href="data-visualization.html#data-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><code>R</code>には極めて多彩なグラフの描画機能が搭載されている。そのため、<code>R</code>上で行なった処理結果を例えばExcelなどにコピペしてグラフを作成するのではなく、ぜひ<code>R</code>の内部でグラフの描画まで完結させることを強く推奨する。昨今は<a href="https://www.tidyverse.org"><code>tidyverse</code></a>パッケージの一部である<a href="https://ggplot2.tidyverse.org"><code>ggplot()</code></a>を用いる方法が<code>R</code>コミュニティの中では優勢であるが、以下では<code>base</code>環境の中で伝統的に用いられてきた関数に基づいて説明する。</p>
+<div id="棒グラフ" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> 棒グラフ<a href="data-visualization.html#棒グラフ" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>棒グラフは<code>barplot()</code>で作成できる。先に作成した、調査年ごとの同類婚の比率が格納された<code>PropDiag_byCensus</code>を引数として渡すと、</p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="data-visualization.html#cb73-1" aria-hidden="true" tabindex="-1"></a>PropDiag_byCensus</span></code></pre></div>
 <pre><code>##        CensusYear
@@ -233,8 +256,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb77-8"><a href="data-visualization.html#cb77-8" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span>(<span class="st">&quot;Proportions of Homogamy, by Education and Census Year&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
 </div>
-<div id="折れ線グラフ" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> 折れ線グラフ<a href="data-visualization.html#折れ線グラフ" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="折れ線グラフ" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> 折れ線グラフ<a href="data-visualization.html#折れ線グラフ" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>折れ線グラフは<code>plot()</code>あるいは<code>matplot()</code>を用いて描画できる。<code>plot()</code>に最低限必要な引数はx軸とy軸に対応するベクトルである。例として、調査年ごとに同類婚が占める割合を折れ線グラフにしてみよう。</p>
 <div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="data-visualization.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 調査年ごとに同類婚の合計比率を算出</span></span>
 <span id="cb78-2"><a href="data-visualization.html#cb78-2" aria-hidden="true" tabindex="-1"></a>PropHomg <span class="ot">&lt;-</span> <span class="fu">apply</span>(PropDiag_byCensus, <span class="dv">2</span>, sum)</span>
@@ -283,46 +306,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb81-18"><a href="data-visualization.html#cb81-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">bty =</span> <span class="st">&quot;n&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
 </div>
-<div id="補足クロス集計表の可視化" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> 補足：クロス集計表の可視化<a href="data-visualization.html#補足クロス集計表の可視化" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="補足クロス集計表の可視化" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> 補足：クロス集計表の可視化<a href="data-visualization.html#補足クロス集計表の可視化" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>クロス表を可視化する方法として、以下ではモザイクプロット（mosaic plot）とバルーンプロット（balloon plot）について解説する。</p>
-<div id="モザイクプロット" class="section level3 hasAnchor" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> モザイクプロット<a href="data-visualization.html#モザイクプロット" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="モザイクプロット" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> モザイクプロット<a href="data-visualization.html#モザイクプロット" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>モザイクプロットは以下の特徴を持つ</p>
 <ul>
 <li>タイルの各辺の長さが行／列の変数の周辺分布を表す</li>
 <li>タイルの面積がセル度数の大きさを示す</li>
 </ul>
-<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="data-visualization.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mosaicplot</span>(EduWH1980)</span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="data-visualization.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mosaicplot</span>(<span class="fu">t</span>(EduWH1980), <span class="at">main =</span> <span class="st">&quot;Distribution of Educational Pairings: 1980 Census&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
 </div>
-<div id="バルーンプロット" class="section level3 hasAnchor" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> バルーンプロット<a href="data-visualization.html#バルーンプロット" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="バルーンプロット" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> バルーンプロット<a href="data-visualization.html#バルーンプロット" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>バルーンプロットは、セル度数に比例した大きさのマーカーをクロス表のセル上にプロットするものである。</p>
 <div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="data-visualization.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gplots)</span></code></pre></div>
 <div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="data-visualization.html#cb84-1" aria-hidden="true" tabindex="-1"></a>EduWH1980_tab <span class="ot">&lt;-</span> <span class="fu">as.table</span>(EduWH1980)  <span class="co"># tableクラスにしてから引き渡す必要がある</span></span>
-<span id="cb84-2"><a href="data-visualization.html#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">balloonplot</span>(<span class="at">x =</span> EduWH1980_tab,</span>
+<span id="cb84-2"><a href="data-visualization.html#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">balloonplot</span>(<span class="at">x =</span> <span class="fu">t</span>(EduWH1980_tab),</span>
 <span id="cb84-3"><a href="data-visualization.html#cb84-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">main =</span> <span class="st">&quot;&quot;</span>,</span>
-<span id="cb84-4"><a href="data-visualization.html#cb84-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">xlab =</span> <span class="st">&quot;Wife&#39;s Education&quot;</span>,</span>
-<span id="cb84-5"><a href="data-visualization.html#cb84-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">ylab =</span> <span class="st">&quot;Husband&#39;s Education&quot;</span>)</span></code></pre></div>
+<span id="cb84-4"><a href="data-visualization.html#cb84-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">ylab =</span> <span class="st">&quot;Wife&#39;s Education&quot;</span>,</span>
+<span id="cb84-5"><a href="data-visualization.html#cb84-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">xlab =</span> <span class="st">&quot;Husband&#39;s Education&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
 
 </div>
 </div>
 </div>
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="多元クロス集計表の処理.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="多元クロス集計表の処理.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reference.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

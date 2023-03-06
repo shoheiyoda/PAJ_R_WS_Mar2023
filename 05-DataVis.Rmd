@@ -1,5 +1,5 @@
 # Data Visualization
-`R`には極めて多彩なグラフの描画機能が搭載されている。そのため、`R`上で行なった処理結果を例えばExcelなどにコピペしてグラフを作成するのではなく、ぜひ`R`の内部でグラフの描画まで完結させることを強く推奨する。昨今は`tidyverse`パッケージの一部である`ggplot()`を用いる方法が`R`コミュニティの中では優勢であるが、以下では`base`環境の中で伝統的に用いられてきた関数に基づいて説明する。
+`R`には極めて多彩なグラフの描画機能が搭載されている。そのため、`R`上で行なった処理結果を例えばExcelなどにコピペしてグラフを作成するのではなく、ぜひ`R`の内部でグラフの描画まで完結させることを強く推奨する。昨今は[`tidyverse`](https://www.tidyverse.org)パッケージの一部である[`ggplot()`](https://ggplot2.tidyverse.org)を用いる方法が`R`コミュニティの中では優勢であるが、以下では`base`環境の中で伝統的に用いられてきた関数に基づいて説明する。
 
 ## 棒グラフ
 棒グラフは`barplot()`で作成できる。先に作成した、調査年ごとの同類婚の比率が格納された`PropDiag_byCensus`を引数として渡すと、
@@ -102,7 +102,7 @@ legend("topright",
 - タイルの面積がセル度数の大きさを示す
 
 ```{r}
-mosaicplot(EduWH1980)
+mosaicplot(t(EduWH1980), main = "Distribution of Educational Pairings: 1980 Census")
 ```
 
 ### バルーンプロット
@@ -114,10 +114,10 @@ library(gplots)
 
 ```{r}
 EduWH1980_tab <- as.table(EduWH1980)  # tableクラスにしてから引き渡す必要がある
-balloonplot(x = EduWH1980_tab,
+balloonplot(x = t(EduWH1980_tab),
             main = "",
-            xlab = "Wife's Education",
-            ylab = "Husband's Education")
+            ylab = "Wife's Education",
+            xlab = "Husband's Education")
 ```
 
 

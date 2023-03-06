@@ -10,12 +10,16 @@
   - 世帯間の経済格差（経済学）
   - 出生の近接要因としての結婚（人口学）
 
-- 学歴同類婚の方法論については[Lichter and Qian(2019)](https://link.springer.com/chapter/10.1007/978-3-319-93227-9_13)に詳しい
+\  
+
+- 学歴同類婚の方法論については @Lichter2019 に詳しい
   1. 比率・相関
   2. オッズ比
   3. 対数線形モデル
   4. Forces of Attraction
   5. regression based approaches (e.g., イベントヒストリーモデル）
 
+\  
+
 - 本報告では1に依拠し、夫婦の学歴組み合わせを示すクロス集計表を分析
-- 日本の学歴同類婚の最近の動向については[Uchikoshi and Raymo (2021)](https://link.springer.com/book/10.1007/978-981-16-3713-1)を参照 
+- 日本の学歴同類婚の最近の動向については @Uchikoshi2021 を参照 

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 データの読み込み | 人口学研究におけるRの活用</title>
-  <meta name="description" content="Chapter 3 データの読み込み | 人口学研究におけるRの活用" />
+  <title>Chapter 2 データの読み込み | 人口学研究におけるRの活用</title>
+  <meta name="description" content="Chapter 2 データの読み込み | 人口学研究におけるRの活用" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 データの読み込み | 人口学研究におけるRの活用" />
+  <meta property="og:title" content="Chapter 2 データの読み込み | 人口学研究におけるRの活用" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 データの読み込み | 人口学研究におけるRの活用" />
+  <meta name="twitter:title" content="Chapter 2 データの読み込み | 人口学研究におけるRの活用" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="余田翔平（国立社会保障・人口問題研究所）" />
 
 
-<meta name="date" content="2023-02-26" />
+<meta name="date" content="2023-03-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -119,6 +119,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -136,48 +158,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">人口学研究におけるRの活用</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> このサイトについて</a></li>
-<li class="chapter" data-level="2" data-path="はじめに.html"><a href="はじめに.html"><i class="fa fa-check"></i><b>2</b> はじめに</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>このサイトについて</a></li>
+<li class="chapter" data-level="1" data-path="はじめに.html"><a href="はじめに.html"><i class="fa fa-check"></i><b>1</b> はじめに</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="はじめに.html"><a href="はじめに.html#本報告の目的"><i class="fa fa-check"></i><b>2.1</b> 本報告の目的</a></li>
-<li class="chapter" data-level="2.2" data-path="はじめに.html"><a href="はじめに.html#人口学的分析への適用例学歴同類婚"><i class="fa fa-check"></i><b>2.2</b> 人口学的分析への適用例：<strong>学歴同類婚</strong></a></li>
+<li class="chapter" data-level="1.1" data-path="はじめに.html"><a href="はじめに.html#本報告の目的"><i class="fa fa-check"></i><b>1.1</b> 本報告の目的</a></li>
+<li class="chapter" data-level="1.2" data-path="はじめに.html"><a href="はじめに.html#人口学的分析への適用例学歴同類婚"><i class="fa fa-check"></i><b>1.2</b> 人口学的分析への適用例：<strong>学歴同類婚</strong></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="データの読み込み.html"><a href="データの読み込み.html"><i class="fa fa-check"></i><b>3</b> データの読み込み</a>
+<li class="chapter" data-level="2" data-path="データの読み込み.html"><a href="データの読み込み.html"><i class="fa fa-check"></i><b>2</b> データの読み込み</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの読み込み"><i class="fa fa-check"></i><b>3.1</b> CSVファイルの読み込み</a></li>
-<li class="chapter" data-level="3.2" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの出力"><i class="fa fa-check"></i><b>3.2</b> CSVファイルの出力</a>
+<li class="chapter" data-level="2.1" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの読み込み"><i class="fa fa-check"></i><b>2.1</b> CSVファイルの読み込み</a></li>
+<li class="chapter" data-level="2.2" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの出力"><i class="fa fa-check"></i><b>2.2</b> CSVファイルの出力</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="データの読み込み.html"><a href="データの読み込み.html#出力するオブジェクトの準備"><i class="fa fa-check"></i><b>3.2.1</b> 出力するオブジェクトの準備</a></li>
-<li class="chapter" data-level="3.2.2" data-path="データの読み込み.html"><a href="データの読み込み.html#write.csv"><i class="fa fa-check"></i><b>3.2.2</b> <code>write.csv()</code></a></li>
-<li class="chapter" data-level="3.2.3" data-path="データの読み込み.html"><a href="データの読み込み.html#write.table"><i class="fa fa-check"></i><b>3.2.3</b> <code>write.table()</code></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html"><i class="fa fa-check"></i><b>4</b> 二元クロス集計表の処理</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#周辺度数の追加"><i class="fa fa-check"></i><b>4.1</b> 周辺度数の追加</a></li>
-<li class="chapter" data-level="4.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#比率proportionの算出"><i class="fa fa-check"></i><b>4.2</b> 比率（proportion）の算出</a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#proportions"><i class="fa fa-check"></i><b>4.2.1</b> <code>proportions()</code></a></li>
-<li class="chapter" data-level="4.2.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#rowpercentscolpercents"><i class="fa fa-check"></i><b>4.2.2</b> <code>rowPercents()</code>・<code>colPercents()</code></a></li>
+<li class="chapter" data-level="2.2.1" data-path="データの読み込み.html"><a href="データの読み込み.html#出力するオブジェクトの準備"><i class="fa fa-check"></i><b>2.2.1</b> 出力するオブジェクトの準備</a></li>
+<li class="chapter" data-level="2.2.2" data-path="データの読み込み.html"><a href="データの読み込み.html#write.csv"><i class="fa fa-check"></i><b>2.2.2</b> <code>write.csv()</code></a></li>
+<li class="chapter" data-level="2.2.3" data-path="データの読み込み.html"><a href="データの読み込み.html#write.table"><i class="fa fa-check"></i><b>2.2.3</b> <code>write.table()</code></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html"><i class="fa fa-check"></i><b>5</b> 多元クロス集計表の処理</a>
+<li class="chapter" data-level="3" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html"><i class="fa fa-check"></i><b>3</b> 二元クロス集計表の処理</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#配列array"><i class="fa fa-check"></i><b>5.1</b> 配列（array）</a></li>
-<li class="chapter" data-level="5.2" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#abindを用いた配列の作成"><i class="fa fa-check"></i><b>5.2</b> <code>abind()</code>を用いた配列の作成</a></li>
-<li class="chapter" data-level="5.3" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyを用いた配列の処理"><i class="fa fa-check"></i><b>5.3</b> <code>apply()</code>を用いた配列の処理</a></li>
-<li class="chapter" data-level="5.4" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyと自作関数を組み合わせる"><i class="fa fa-check"></i><b>5.4</b> <code>apply()</code>と自作関数を組み合わせる</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>6</b> Data Visualization</a>
+<li class="chapter" data-level="3.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#周辺度数の追加"><i class="fa fa-check"></i><b>3.1</b> 周辺度数の追加</a></li>
+<li class="chapter" data-level="3.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#比率proportionの算出"><i class="fa fa-check"></i><b>3.2</b> 比率（proportion）の算出</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="data-visualization.html"><a href="data-visualization.html#棒グラフ"><i class="fa fa-check"></i><b>6.1</b> 棒グラフ</a></li>
-<li class="chapter" data-level="6.2" data-path="data-visualization.html"><a href="data-visualization.html#折れ線グラフ"><i class="fa fa-check"></i><b>6.2</b> 折れ線グラフ</a></li>
-<li class="chapter" data-level="6.3" data-path="data-visualization.html"><a href="data-visualization.html#補足クロス集計表の可視化"><i class="fa fa-check"></i><b>6.3</b> 補足：クロス集計表の可視化</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="data-visualization.html"><a href="data-visualization.html#モザイクプロット"><i class="fa fa-check"></i><b>6.3.1</b> モザイクプロット</a></li>
-<li class="chapter" data-level="6.3.2" data-path="data-visualization.html"><a href="data-visualization.html#バルーンプロット"><i class="fa fa-check"></i><b>6.3.2</b> バルーンプロット</a></li>
+<li class="chapter" data-level="3.2.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#proportions"><i class="fa fa-check"></i><b>3.2.1</b> <code>proportions()</code></a></li>
+<li class="chapter" data-level="3.2.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#rowpercentscolpercents"><i class="fa fa-check"></i><b>3.2.2</b> <code>rowPercents()</code>・<code>colPercents()</code></a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html"><i class="fa fa-check"></i><b>4</b> 多元クロス集計表の処理</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#配列array"><i class="fa fa-check"></i><b>4.1</b> 配列（array）</a></li>
+<li class="chapter" data-level="4.2" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#abindを用いた配列の作成"><i class="fa fa-check"></i><b>4.2</b> <code>abind()</code>を用いた配列の作成</a></li>
+<li class="chapter" data-level="4.3" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyを用いた配列の処理"><i class="fa fa-check"></i><b>4.3</b> <code>apply()</code>を用いた配列の処理</a></li>
+<li class="chapter" data-level="4.4" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyと自作関数を組み合わせる"><i class="fa fa-check"></i><b>4.4</b> <code>apply()</code>と自作関数を組み合わせる</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>5</b> Data Visualization</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="data-visualization.html"><a href="data-visualization.html#棒グラフ"><i class="fa fa-check"></i><b>5.1</b> 棒グラフ</a></li>
+<li class="chapter" data-level="5.2" data-path="data-visualization.html"><a href="data-visualization.html#折れ線グラフ"><i class="fa fa-check"></i><b>5.2</b> 折れ線グラフ</a></li>
+<li class="chapter" data-level="5.3" data-path="data-visualization.html"><a href="data-visualization.html#補足クロス集計表の可視化"><i class="fa fa-check"></i><b>5.3</b> 補足：クロス集計表の可視化</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="data-visualization.html"><a href="data-visualization.html#モザイクプロット"><i class="fa fa-check"></i><b>5.3.1</b> モザイクプロット</a></li>
+<li class="chapter" data-level="5.3.2" data-path="data-visualization.html"><a href="data-visualization.html#バルーンプロット"><i class="fa fa-check"></i><b>5.3.2</b> バルーンプロット</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -197,9 +220,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="データの読み込み" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> データの読み込み<a href="データの読み込み.html#データの読み込み" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>本報告では<a href="https://www.jstage.jst.go.jp/article/jps/57/0/57_2101001/_article/-char/en">Fukuda et al.(2021)</a>のSupplemental Tableとして掲載されているデータを用いる。これは「国勢調査」の調査票情報を用いて、妻が30-39歳の夫婦の学歴組み合わせを示すクロス集計表である。例えば、以下は1980年の「国勢調査」にもとづく夫婦の学歴組み合わせである。</p>
+<div id="データの読み込み" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> データの読み込み<a href="データの読み込み.html#データの読み込み" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>本報告では <span class="citation">Fukuda, Yoda, and Mogi (<a href="#ref-Fukuda2021" role="doc-biblioref">2021</a>)</span> のSupplemental Tableとして掲載されているデータを用いる。これは「国勢調査」の調査票情報を用いて、妻が30-39歳の夫婦の学歴組み合わせを示すクロス集計表である。例えば、以下は1980年の「国勢調査」にもとづく夫婦の学歴組み合わせである。</p>
 <pre><code>##        EduH
 ## EduW          JHS         HS      VC/JC       UNI
 ##   JHS   1825957.2  692306.05  25961.477  43269.13
@@ -208,14 +231,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##   UNI         0.0   25961.48   8653.826 337499.20</code></pre>
 <p>表側には妻の学歴（<code>EduW</code>）、表頭には夫の学歴（<code>EduH</code>）がそれぞれ置かれている。ここに調査年（<code>CensusYear</code>）を追加すると、妻の学歴×夫の学歴×調査年の3変数からなる多元クロス集計表を作成することができる。</p>
 <p>本報告では、上のようなクロス集計表のデータが事前に与えられている状況を想定して進めていく。具体的には、「国勢調査」の調査年別に<span class="math inline">\(4\times4=16\)</span>セルの度数がCSVファイルなどで与えられているものとする。そのため、以下ではCSVファイルの出入力の基本操作を押さえておこう。</p>
-<div id="csvファイルの読み込み" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> CSVファイルの読み込み<a href="データの読み込み.html#csvファイルの読み込み" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="csvファイルの読み込み" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> CSVファイルの読み込み<a href="データの読み込み.html#csvファイルの読み込み" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>まず、本報告で用いるCSVファイルは<code>CensusCSV/CSV_EduWH</code>フォルダに保存されている。ここには1980年、1990年、2000年、2010年の「国勢調査」を用いて集計された夫婦の学歴組み合わせのデータファイルが調査年ごとに保存されている。例えば、以下は1980年調査のデータファイルである<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>。</p>
 <div class="figure">
 <img src="Figures/02_Data/EduWH1980.png" alt="" />
 <p class="caption">夫婦の学歴組み合わせ：1980年</p>
 </div>
-<p>CSVファイルの読み込みには<code>read.csv()</code>を用いる。この関数に最低限必要な引数は、読み込みの対象となるCSVファイルのパス（<code>file</code>）である。CSVファイルがワーキングディレクトリと同じ階層に保存されている場合はファイル名を文字列で引き渡せばよい。CSVファイルが異なる階層に保存されている場合は、相対パスあるいはフルパスでファイルの場所を指定する。その際、報告者個人が推奨する方法は、CSVファイルが保存されているフォルダのパスをオブジェクトと保存しておき、そのオブジェクトとファイル名の文字列とを<code>paste()</code>あるいは<code>paste0()</code>で結合する方法である。このようにしておくと、CSVファイルの保存場所が変更された場合でも、そのフォルダパスを示すオブジェクトのみを修正すればそれ以外のコードを修正する必要がないためである。</p>
+<p>CSVファイルの読み込みには<code>read.csv()</code>を用いる。この関数に最低限必要な引数は、読み込みの対象となるCSVファイルのパス（<code>file</code>）である。CSVファイルがワーキングディレクトリと同じ階層に保存されている場合はファイル名を文字列で引き渡せばよい。CSVファイルが異なる階層に保存されている場合は、相対パスあるいはフルパスでファイルの場所を指定する。その際、報告者個人が推奨する方法は、CSVファイルが保存されているフォルダのパスをオブジェクトと保存しておき、そのオブジェクトとファイル名の文字列とを<code>paste()</code>あるいは<code>paste0()</code>で結合する方法である<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>。このようにしておくと、CSVファイルの保存場所が変更された場合でも、そのフォルダパスを示すオブジェクトのみを修正すればそれ以外のコードを修正する必要がないためである。</p>
 <p>また、今回の例には当てはまらないが、1行目が変数名となっている場合は、<code>header = TRUE</code>とすると（むしろ、こちらがデフォルトの設定）1行目は変数名として処理され、2行目からobservationとして認識される。</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="データの読み込み.html#cb2-1" aria-hidden="true" tabindex="-1"></a>CensusDir <span class="ot">&lt;-</span> <span class="st">&quot;CensusCSV/CSV_EduWH/&quot;</span></span>
 <span id="cb2-2"><a href="データの読み込み.html#cb2-2" aria-hidden="true" tabindex="-1"></a>FN_EduWH1980csv <span class="ot">&lt;-</span> <span class="fu">paste0</span>(CensusDir, <span class="st">&quot;EduWH1980.csv&quot;</span>)</span>
@@ -268,12 +291,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##   VC/JC   34615.3  207691.82  69230.605 493268.06
 ##   UNI         0.0   25961.48   8653.826 337499.20</code></pre>
 </div>
-<div id="csvファイルの出力" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> CSVファイルの出力<a href="データの読み込み.html#csvファイルの出力" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="csvファイルの出力" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> CSVファイルの出力<a href="データの読み込み.html#csvファイルの出力" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>つづいて、<code>R</code>の上で作成したオブジェクトを外部ファイルに出力する方法について見ておこう。オブジェクトはさまざまなフォーマットで出力可能であるが、ここではCSVファイルの出力方法について説明する。</p>
-<div id="出力するオブジェクトの準備" class="section level3 hasAnchor" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> 出力するオブジェクトの準備<a href="データの読み込み.html#出力するオブジェクトの準備" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>前節ではすでに調査年ごとのクロス集計表がCSVファイルの形式で用意されていることを前提に、CSVファイルを読み込む方法を見てきた。しかしながら、<a href="https://www.jstage.jst.go.jp/article/jps/57/0/57_2101001/_article/-char/en">Fukuda et al.(2021)</a>で公表されているのは、以下のように、調査年ごとの夫婦学歴組み合わせのクロス集計表の<strong>全体度数</strong>と<strong>全体パーセント</strong>のみである。</p>
+<div id="出力するオブジェクトの準備" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> 出力するオブジェクトの準備<a href="データの読み込み.html#出力するオブジェクトの準備" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>前節ではすでに調査年ごとのクロス集計表がCSVファイルの形式で用意されていることを前提に、CSVファイルを読み込む方法を見てきた。しかしながら、<span class="citation">Fukuda, Yoda, and Mogi (<a href="#ref-Fukuda2021" role="doc-biblioref">2021</a>)</span> で公表されているのは、以下のように、調査年ごとの夫婦学歴組み合わせのクロス集計表の<strong>全体度数</strong>と<strong>全体パーセント</strong>のみである。</p>
 <div class="figure">
 <img src="Figures/02_Data/Fukuda_etal_2021.png" alt="" />
 <p class="caption">Fukuda et al.(2021)</p>
@@ -309,8 +332,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## [4,]   963.072  13483.01  8667.648 77527.296</code></pre>
 <p>とすれば、2010年の夫婦の学歴組み合わせのクロス集計表が得られる。</p>
 </div>
-<div id="write.csv" class="section level3 hasAnchor" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> <code>write.csv()</code><a href="データの読み込み.html#write.csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="write.csv" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> <code>write.csv()</code><a href="データの読み込み.html#write.csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>CSVファイルを出力するための関数のひとつが<code>write.csv()</code>である。第1の引数として保存するオブジェクト名を指定し、<code>file</code>には保存するファイル名を（パスも含めて）指定する。<code>row.names = FALSE</code>を指定しないと、第1列目に行ラベル（ない場合は行番号）が表示される。</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="データの読み込み.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(EduWH2010, <span class="at">file =</span> <span class="fu">paste0</span>(OutDir, <span class="st">&quot;EduWH2010_writecsv.csv&quot;</span>), <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p>保存されたCSVファイルを開いてみると、第1行目に列名（変数名）が表示されていることがわかる。このままでも必要な情報（セル度数）は保存されているので大きな問題ではないが、列名も表示させたくない場合は<code>write.table()</code>を使うと良い。</p>
@@ -319,8 +342,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="caption"><code>write.csv()</code>で出力されたCSV</p>
 </div>
 </div>
-<div id="write.table" class="section level3 hasAnchor" number="3.2.3">
-<h3><span class="header-section-number">3.2.3</span> <code>write.table()</code><a href="データの読み込み.html#write.table" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="write.table" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> <code>write.table()</code><a href="データの読み込み.html#write.table" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><code>write.table()</code>では<code>col.names</code>という引数を指定でき、これを<code>FALSE</code>にすると列名が表示されなくなる。この関数を用いてCSVファイルを出力する際にはセパレータ<code>sep</code>をカンマにしておく。</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="データの読み込み.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(EduWH2010, <span class="at">file =</span> <span class="fu">paste0</span>(OutDir, <span class="st">&quot;EduWH2010.csv&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p>保存されたCSVファイルを確認すると、列名が保存されていないことがわかる。</p>
@@ -332,10 +355,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
+<h3>Reference<a href="reference.html#reference" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Fukuda2021" class="csl-entry">
+Fukuda, Setsuya, Shohei Yoda, and Ryohei Mogi. 2021. <span>“Educational <span>Assortative Mating</span> in <span>Japan</span>: <span>Evidence</span> from the 1980 <span>Census</span>.”</span> <em>The Journal of Population Studies</em> 57: 1–20. <a href="https://doi.org/10.24454/jps.2101001">https://doi.org/10.24454/jps.2101001</a>.
+</div>
+</div>
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p><a href="https://www.jstage.jst.go.jp/article/jps/57/0/57_2101001/_article/-char/en">Fukuda et al.(2021)</a>の付表として公開されているのはクロス集計表の全体度数と全体パーセントのみであるため、論文内の分析を完全に再現することができない。クロス集計表を用いた分析の再現性の担保のためには、クロス集計表の各セルの<strong>度数</strong>を公表すべきである。<a href="データの読み込み.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p><span class="citation">Fukuda, Yoda, and Mogi (<a href="#ref-Fukuda2021" role="doc-biblioref">2021</a>)</span> の付表として公開されているのはクロス集計表の全体度数と全体パーセントのみであるため、論文内の分析を完全に再現することができない（4行1列目のセル度数（<span class="math inline">\(n_{41}\)</span>）が0になっているのはそのためである）。クロス集計表を用いた分析の再現性の担保のためには、クロス集計表の各セルの<strong>度数</strong>を公表すべきである。<a href="データの読み込み.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p><code>paste()</code>や<code>paste0()</code>はともに文字列を連結させる関数である。両者の違いは、文字列を結合させる際のセパレーター（<code>sep</code>）のデフォルトがカンマ（<code>paste()</code>）か空白（<code>paste0()</code>）かである。<a href="データの読み込み.html#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

@@ -23,7 +23,7 @@
 <meta name="author" content="余田翔平（国立社会保障・人口問題研究所）" />
 
 
-<meta name="date" content="2023-02-26" />
+<meta name="date" content="2023-03-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -119,6 +119,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -136,48 +158,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">人口学研究におけるRの活用</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> このサイトについて</a></li>
-<li class="chapter" data-level="2" data-path="はじめに.html"><a href="はじめに.html"><i class="fa fa-check"></i><b>2</b> はじめに</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>このサイトについて</a></li>
+<li class="chapter" data-level="1" data-path="はじめに.html"><a href="はじめに.html"><i class="fa fa-check"></i><b>1</b> はじめに</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="はじめに.html"><a href="はじめに.html#本報告の目的"><i class="fa fa-check"></i><b>2.1</b> 本報告の目的</a></li>
-<li class="chapter" data-level="2.2" data-path="はじめに.html"><a href="はじめに.html#人口学的分析への適用例学歴同類婚"><i class="fa fa-check"></i><b>2.2</b> 人口学的分析への適用例：<strong>学歴同類婚</strong></a></li>
+<li class="chapter" data-level="1.1" data-path="はじめに.html"><a href="はじめに.html#本報告の目的"><i class="fa fa-check"></i><b>1.1</b> 本報告の目的</a></li>
+<li class="chapter" data-level="1.2" data-path="はじめに.html"><a href="はじめに.html#人口学的分析への適用例学歴同類婚"><i class="fa fa-check"></i><b>1.2</b> 人口学的分析への適用例：<strong>学歴同類婚</strong></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="データの読み込み.html"><a href="データの読み込み.html"><i class="fa fa-check"></i><b>3</b> データの読み込み</a>
+<li class="chapter" data-level="2" data-path="データの読み込み.html"><a href="データの読み込み.html"><i class="fa fa-check"></i><b>2</b> データの読み込み</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの読み込み"><i class="fa fa-check"></i><b>3.1</b> CSVファイルの読み込み</a></li>
-<li class="chapter" data-level="3.2" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの出力"><i class="fa fa-check"></i><b>3.2</b> CSVファイルの出力</a>
+<li class="chapter" data-level="2.1" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの読み込み"><i class="fa fa-check"></i><b>2.1</b> CSVファイルの読み込み</a></li>
+<li class="chapter" data-level="2.2" data-path="データの読み込み.html"><a href="データの読み込み.html#csvファイルの出力"><i class="fa fa-check"></i><b>2.2</b> CSVファイルの出力</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="データの読み込み.html"><a href="データの読み込み.html#出力するオブジェクトの準備"><i class="fa fa-check"></i><b>3.2.1</b> 出力するオブジェクトの準備</a></li>
-<li class="chapter" data-level="3.2.2" data-path="データの読み込み.html"><a href="データの読み込み.html#write.csv"><i class="fa fa-check"></i><b>3.2.2</b> <code>write.csv()</code></a></li>
-<li class="chapter" data-level="3.2.3" data-path="データの読み込み.html"><a href="データの読み込み.html#write.table"><i class="fa fa-check"></i><b>3.2.3</b> <code>write.table()</code></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html"><i class="fa fa-check"></i><b>4</b> 二元クロス集計表の処理</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#周辺度数の追加"><i class="fa fa-check"></i><b>4.1</b> 周辺度数の追加</a></li>
-<li class="chapter" data-level="4.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#比率proportionの算出"><i class="fa fa-check"></i><b>4.2</b> 比率（proportion）の算出</a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#proportions"><i class="fa fa-check"></i><b>4.2.1</b> <code>proportions()</code></a></li>
-<li class="chapter" data-level="4.2.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#rowpercentscolpercents"><i class="fa fa-check"></i><b>4.2.2</b> <code>rowPercents()</code>・<code>colPercents()</code></a></li>
+<li class="chapter" data-level="2.2.1" data-path="データの読み込み.html"><a href="データの読み込み.html#出力するオブジェクトの準備"><i class="fa fa-check"></i><b>2.2.1</b> 出力するオブジェクトの準備</a></li>
+<li class="chapter" data-level="2.2.2" data-path="データの読み込み.html"><a href="データの読み込み.html#write.csv"><i class="fa fa-check"></i><b>2.2.2</b> <code>write.csv()</code></a></li>
+<li class="chapter" data-level="2.2.3" data-path="データの読み込み.html"><a href="データの読み込み.html#write.table"><i class="fa fa-check"></i><b>2.2.3</b> <code>write.table()</code></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html"><i class="fa fa-check"></i><b>5</b> 多元クロス集計表の処理</a>
+<li class="chapter" data-level="3" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html"><i class="fa fa-check"></i><b>3</b> 二元クロス集計表の処理</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#配列array"><i class="fa fa-check"></i><b>5.1</b> 配列（array）</a></li>
-<li class="chapter" data-level="5.2" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#abindを用いた配列の作成"><i class="fa fa-check"></i><b>5.2</b> <code>abind()</code>を用いた配列の作成</a></li>
-<li class="chapter" data-level="5.3" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyを用いた配列の処理"><i class="fa fa-check"></i><b>5.3</b> <code>apply()</code>を用いた配列の処理</a></li>
-<li class="chapter" data-level="5.4" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyと自作関数を組み合わせる"><i class="fa fa-check"></i><b>5.4</b> <code>apply()</code>と自作関数を組み合わせる</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>6</b> Data Visualization</a>
+<li class="chapter" data-level="3.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#周辺度数の追加"><i class="fa fa-check"></i><b>3.1</b> 周辺度数の追加</a></li>
+<li class="chapter" data-level="3.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#比率proportionの算出"><i class="fa fa-check"></i><b>3.2</b> 比率（proportion）の算出</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="data-visualization.html"><a href="data-visualization.html#棒グラフ"><i class="fa fa-check"></i><b>6.1</b> 棒グラフ</a></li>
-<li class="chapter" data-level="6.2" data-path="data-visualization.html"><a href="data-visualization.html#折れ線グラフ"><i class="fa fa-check"></i><b>6.2</b> 折れ線グラフ</a></li>
-<li class="chapter" data-level="6.3" data-path="data-visualization.html"><a href="data-visualization.html#補足クロス集計表の可視化"><i class="fa fa-check"></i><b>6.3</b> 補足：クロス集計表の可視化</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="data-visualization.html"><a href="data-visualization.html#モザイクプロット"><i class="fa fa-check"></i><b>6.3.1</b> モザイクプロット</a></li>
-<li class="chapter" data-level="6.3.2" data-path="data-visualization.html"><a href="data-visualization.html#バルーンプロット"><i class="fa fa-check"></i><b>6.3.2</b> バルーンプロット</a></li>
+<li class="chapter" data-level="3.2.1" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#proportions"><i class="fa fa-check"></i><b>3.2.1</b> <code>proportions()</code></a></li>
+<li class="chapter" data-level="3.2.2" data-path="二元クロス集計表の処理.html"><a href="二元クロス集計表の処理.html#rowpercentscolpercents"><i class="fa fa-check"></i><b>3.2.2</b> <code>rowPercents()</code>・<code>colPercents()</code></a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html"><i class="fa fa-check"></i><b>4</b> 多元クロス集計表の処理</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#配列array"><i class="fa fa-check"></i><b>4.1</b> 配列（array）</a></li>
+<li class="chapter" data-level="4.2" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#abindを用いた配列の作成"><i class="fa fa-check"></i><b>4.2</b> <code>abind()</code>を用いた配列の作成</a></li>
+<li class="chapter" data-level="4.3" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyを用いた配列の処理"><i class="fa fa-check"></i><b>4.3</b> <code>apply()</code>を用いた配列の処理</a></li>
+<li class="chapter" data-level="4.4" data-path="多元クロス集計表の処理.html"><a href="多元クロス集計表の処理.html#applyと自作関数を組み合わせる"><i class="fa fa-check"></i><b>4.4</b> <code>apply()</code>と自作関数を組み合わせる</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>5</b> Data Visualization</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="data-visualization.html"><a href="data-visualization.html#棒グラフ"><i class="fa fa-check"></i><b>5.1</b> 棒グラフ</a></li>
+<li class="chapter" data-level="5.2" data-path="data-visualization.html"><a href="data-visualization.html#折れ線グラフ"><i class="fa fa-check"></i><b>5.2</b> 折れ線グラフ</a></li>
+<li class="chapter" data-level="5.3" data-path="data-visualization.html"><a href="data-visualization.html#補足クロス集計表の可視化"><i class="fa fa-check"></i><b>5.3</b> 補足：クロス集計表の可視化</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="data-visualization.html"><a href="data-visualization.html#モザイクプロット"><i class="fa fa-check"></i><b>5.3.1</b> モザイクプロット</a></li>
+<li class="chapter" data-level="5.3.2" data-path="data-visualization.html"><a href="data-visualization.html#バルーンプロット"><i class="fa fa-check"></i><b>5.3.2</b> バルーンプロット</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -201,17 +224,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 class="title">人口学研究におけるRの活用</h1>
 <h2 class="subtitle"><em>Rによるカテゴリカルデータ分析：多重クロス表</em></h2>
 <p class="author"><em>余田翔平（国立社会保障・人口問題研究所）</em></p>
-<p class="date"><em>2023-02-26</em></p>
+<p class="date"><em>2023-03-06</em></p>
 </div>
-<div id="このサイトについて" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> このサイトについて<a href="index.html#このサイトについて" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="このサイトについて" class="section level1 unnumbered hasAnchor">
+<h1>このサイトについて<a href="index.html#このサイトについて" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>このサイトは日本人口学会による研究集会「人口学研究におけるRの活用」（2023年3月22日）の報告資料および演習用ページです。研究集会は学会員限定ですが、本サイトはどなたでも閲覧可能です。研究集会後も本資料は修正・更新される可能性があります。</p>
-<!-- # ```{r include=FALSE} -->
-<!-- # # automatically create a bib database for R packages -->
-<!-- # knitr::write_bib(c( -->
-<!-- #   .packages(), 'bookdown', 'knitr', 'rmarkdown' -->
-<!-- # ), 'packages.bib') -->
-<!-- # ``` -->
 
 </div>
             </section>
