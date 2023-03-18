@@ -1,7 +1,7 @@
 --- 
 title: "人口学研究におけるRの活用"
 author: "余田翔平（国立社会保障・人口問題研究所）"
-date: "`r Sys.Date()`"
+date: "2023-03-22"
 subtitle: Rによるカテゴリカルデータ分析：多重クロス表
 site: bookdown::bookdown_site
 documentclass: book
